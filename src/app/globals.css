@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'flowbite/dist/flowbite.css';
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  background-repeat: no-repeat;
+  background-size: 100rem;
+  background-color: #cbd3cb;
+font-family: serif;
+} */
+.editor {
+  position: relative;
+  display: flex;
+  width: 85%;
+  height: 85%;
+  margin: 2px auto;
+  border: 2px solid rgb(56, 56, 56);
+  border-radius: 5px;
+
+}
+
+[data-lexical-editor] {
+  padding: 2px 12px;
+  outline: none;
+}
+
+[data-lexical-editor] p {
+  margin: 0.8em 0;
+}
+
+.toolbar {
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid rgb(56, 56, 56);
+  width: 85%;
+  margin: auto;
+}
+
+.toolbar > button {
+  all: unset;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.toolbar > button:hover {
+  background: #F4F4F5;
+}
+
+/* For mobile */
+.floating-threads {
+  display: none;
+}
+
+/* For desktop */
+.anchored-threads {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  right: 4px;
+}
+
+@media (max-width: 640px) {
+  .floating-threads {
+    display: block;
+  }
+
+  .anchored-threads {
+    display: none;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  pointer-events: none;
+  opacity: 0.5;
+}
